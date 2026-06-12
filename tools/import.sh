@@ -1,9 +1,42 @@
-#嶼/usr/bin/env bash
+#!/bin/bash
 set -e
-BASE=https://plucky-birch-681.higgsfield.gg
-mkdir -p public/assets/audio
-for f in index.html game.js strings.js; do curl -fsS $BASE/$f -o public/$f; done
-for f in bg.jpg mama.png egg.png baby.png; do curl -fsS $BASE/assets/$f -o public/assets/$f; done
-for f in n1 n2 n3 n4 n5 n6 n7 n8 n9 n10 praise1 praise2 praise3 retry q intro final sfx_pop sfx_win; do curl -fsS $BASE/assets/audio/$f.mp3 -o public/assets/audio/$f.mp3; done
-curl -fsS $BASE/assets/audio/music_loop.m4a -o public/assets/audio/music_loop.m4a
+mkdir -p assets
+cd assets
+curl -O https://www.polya.ai/dino/index.html
+curl -O https://www.polya.ai/dino/game.js
+curl -O https://www.polya.ai/dino/strings.js
+curl -O https://www.polya.ai/dino/TRex-run-00.png
+curl -O https://www.polya.ai/dino/TRex-run-01.png
+curl -O https://www.polya.ai/dino/TRex-run-02.png
+curl -O https://www.polya.ai/dino/TRex-dead.png
+curl -O https://www.polya.ai/dino/trice.png
+curl -O https://www.polya.ai/dino/stego.png
+curl -O https://www.polya.ai/dino/ptero.png
+curl -O https://www.polya.ai/dino/leaf.png
+curl -O https://www.polya.ai/dino/audio/findDigit.mp3
+curl -O https://www.polya.ai/dino/audio/feed.mp3
+curl -O https://www.polya.ai/dino/audio/more.mp3
+curl -O https://www.polya.ai/dino/audio/less.mp3
+curl -O https://www.polya.ai/dino/audio/nextq.mp3
+curl -O https://www.polya.ai/dino/audio/match.mp3
+curl -O https://www.polya.ai/dino/audio/award.mp3
+curl -O https://www.polya.ai/dino/audio/back.mp3
+curl -O https://www.polya.ai/dino/audio/count.mp3
+curl -O https://www.polya.ai/dino/audio/four.mp3
+curl -O https://www.polya.ai/dino/audio/max.mp3
+curl -O https://www.polya.ai/dino/audio/one.mp3
+curl -O https://www.polya.ai/dino/audio/play.mp3
+curl -O https://www.polya.ai/dino/audio/retry.mp3
+curl -O https://www.polya.ai/dino/audio/seven.mp3
+curl -O https://www.polya.ai/dino/audio/six.mp3
+curl -O https://www.polya.ai/dino/audio/start.mp3
+curl -O https://www.polya.ai/dino/audio/three.mp3
+curl -O https://www.polya.ai/dino/audio/two.mp3
+curl -O https://www.polya.ai/dino/audio/zero.mp3
+curl -O https://www.polya.ai/dino/audio/music_loop.m4a
+curl -O https://www.polya.ai/dino/audio/eight.mp3
+curl -O https://www.polya.ai/dino/audio/five.mp3
+curl -O https://www.polya.ai/dino/audio/gameover.mp3
+curl -O https://www.polya.ai/dino/audio/menu.mp3
+curl -O https://www.polya.ai/dino/audio/nine.mp3
 rm -f hello-test.txt
