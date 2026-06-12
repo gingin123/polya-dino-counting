@@ -1,42 +1,9 @@
-#!/bin/bash
+#!/usr/bin/env bash
 set -e
-mkdir -p assets
-cd assets
-curl -O https://www.polya.ai/dino/index.html
-curl -O https://www.polya.ai/dino/game.js
-curl -O https://www.polya.ai/dino/strings.js
-curl -O https://www.polya.ai/dino/TRex-run-00.png
-curl -O https://www.polya.ai/dino/TRex-run-01.png
-curl -O https://www.polya.ai/dino/TRex-run-02.png
-curl -O https://www.polya.ai/dino/TRex-dead.png
-curl -O https://www.polya.ai/dino/trice.png
-curl -O https://www.polya.ai/dino/stego.png
-curl -O https://www.polya.ai/dino/ptero.png
-curl -O https://www.polya.ai/dino/leaf.png
-curl -O https://www.polya.ai/dino/audio/findDigit.mp3
-curl -O https://www.polya.ai/dino/audio/feed.mp3
-curl -O https://www.polya.ai/dino/audio/more.mp3
-curl -O https://www.polya.ai/dino/audio/less.mp3
-curl -O https://www.polya.ai/dino/audio/nextq.mp3
-curl -O https://www.polya.ai/dino/audio/match.mp3
-curl -O https://www.polya.ai/dino/audio/award.mp3
-curl -O https://www.polya.ai/dino/audio/back.mp3
-curl -O https://www.polya.ai/dino/audio/count.mp3
-curl -O https://www.polya.ai/dino/audio/four.mp3
-curl -O https://www.polya.ai/dino/audio/max.mp3
-curl -O https://www.polya.ai/dino/audio/one.mp3
-curl -O https://www.polya.ai/dino/audio/play.mp3
-curl -O https://www.polya.ai/dino/audio/retry.mp3
-curl -O https://www.polya.ai/dino/audio/seven.mp3
-curl -O https://www.polya.ai/dino/audio/six.mp3
-curl -O https://www.polya.ai/dino/audio/start.mp3
-curl -O https://www.polya.ai/dino/audio/three.mp3
-curl -O https://www.polya.ai/dino/audio/two.mp3
-curl -O https://www.polya.ai/dino/audio/zero.mp3
-curl -O https://www.polya.ai/dino/audio/music_loop.m4a
-curl -O https://www.polya.ai/dino/audio/eight.mp3
-curl -O https://www.polya.ai/dino/audio/five.mp3
-curl -O https://www.polya.ai/dino/audio/gameover.mp3
-curl -O https://www.polya.ai/dino/audio/menu.mp3
-curl -O https://www.polya.ai/dino/audio/nine.mp3
+BASE=https://plucky-birch-681.higgsfield.gg
+mkdir -p public/assets/audio
+for f in index.html game.js strings.js; do curl -fsS $BASE/$f -o public/$f; done
+for f in bg.jpg mama.png egg.png baby.png trice.png stego.png ptero.png bronto.png anky.png leaf.png; do curl -fsS $BASE/assets/$f -o public/assets/$f; done
+for f in sfx_pop sfx_win; do curl -fsS $BASE/assets/audio/$f.mp3 -o public/assets/audio/$f.mp3; done
+curl -fsS $BASE/assets/audio/music_loop.m4a -o public/assets/audio/music_loop.m4a
 rm -f hello-test.txt
