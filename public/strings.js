@@ -1,1 +1,21 @@
-the Russian strings dictionary export const STR
+export const STR = {
+  title: "Динозаврики учат счёт",
+  forPolya: "Для Поли",
+  play: "ИГРАТЬ",
+  continueFrom: "Продолжить с уровня",
+  level: "Уровень",
+  tapEggs: "Нажимай на яички!",
+  howMany: "Сколько яичек?",
+  findDigit: "Найди цифру",
+  feedTitle: "Накорми динозаврика!",
+  feedHint: "Дай листиков:",
+  moreTitle: "Где яичек БОЛЬШЕ?",
+  lessTitle: "Где яичек МЕНЬШЕ?",
+  nextTitle: "Какое число дальше?",
+  matchTitle: "Где столько же динозавриков?",
+  next: "Дальше",
+  again: "Играть ещё раз",
+  finalTitle: "Ура! Вся коллекция собрана!",
+  collection: "Коллекция",
+  newDino: "Новый динозаврик!",
+};
