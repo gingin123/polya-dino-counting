@@ -1,0 +1,1 @@
+the Russian strings dictionary export const STR
